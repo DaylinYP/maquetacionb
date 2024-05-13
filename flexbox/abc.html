@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .column {
+            float: left;
+            width: 50%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* Media query para pantallas más pequeñas */
+        @media (max-width: 768px) {
+            .column {
+                width: 100%;
+            }
+        }
+
+        /* Clearfix para manejar el float en las columnas */
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container clearfix">
+        <div class="column" style="background-color: #f2f2f2;">
+            <h2>Columna 1</h2>
+            <p>Contenido de la columna 1...</p>
+        </div>
+
+        <div class="column" style="background-color: #ddd;">
+            <h2>Columna 2</h2>
+            <p>Contenido de la columna 2...</p>
+        </div>
+    </div>
+
+</body>
+</html>
